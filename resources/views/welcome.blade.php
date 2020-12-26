@@ -39,7 +39,11 @@
 								<a href="#" class="font-medium text-gray-500 hover:text-gray-900">Sessions</a>
 								<a href="#" class="font-medium text-gray-500 hover:text-gray-900">Show Hall</a>
 								<a href="#" class="font-medium text-gray-500 hover:text-gray-900">About</a>
-								<a href="#" class="font-medium text-blue-600 hover:text-blue-500">Log in</a>
+								@auth
+									<a href="{{route('dashboard')}}" class="font-medium text-blue-600 hover:text-blue-500">Dashboard</a>
+								@else
+									<a href="{{route('login')}}" class="font-medium text-blue-600 hover:text-blue-500">Log in</a>
+								@endauth
 							</div>
 						</nav>
 					</div>
